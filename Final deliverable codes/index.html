@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<title>Liver Prediction</title>
+
+</head>
+<body>
+    <div class="b">
+        <h2 class='body_heading'><span class="heading">Liver Disease Prediction Model</span></h2>
+    </div>
+
+    <div class="division">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <br>
+            <div class="d1">
+            <h3>Age</h3>
+            <input id="age" name="Age" placeholder="in Year" required="required">
+            <br>
+            <h3>Gender</h3>
+            <input id="gender" name="Gender" placeholder="Male/Female" required="required">
+            <br>
+            <h3>Total Bilirubin</h3>
+            <input id="bil" name="Total_Bilirubin" placeholder="Total Bilirubin" required="required">
+            <br>
+            <h3>Direct Bilirubin</h3>
+            <input id="dir" name="Direct_Bilirubin" placeholder="Direct Bilirubin" required="required">
+	    <br>
+            <h3>Alkaline Phosphotase</h3>
+            <input id="alk" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase" required="required">
+            </div>
+            <br>
+            <div class="d2">
+            <h3>Alamine Aminotransferase</h3>
+            <input id="ala" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase" required="required">
+            <br>
+            <h3>Aspartate Aminotransferase</h3>
+            <input id="asp" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase" required="required">
+            <br>
+            <h3>Total Protiens</h3>
+            <input id="tot" name="Total_Protiens" placeholder="Total Protiens" required="required">
+            <br>
+            <h3>Albumin</h3>
+            <input id="alb" name="Albumin" placeholder="Albumin" required="required">
+            <br>
+            <h3>Albumin and Globulin Ratio</h3>
+            <input id="glo" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio" required="required">
+            </div>
+            <br>
+            <br>
+            <br>
+            <button id="sub" type="submit ">Submit</button>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </form>
+    </div>
+
+
+
+
+<style>
+body
+{
+background-image:url("https://image.shutterstock.com/image-illustration/3d-illustration-abstract-medical-background-260nw-1118711141.jpg");
+height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size:cover;
+
+}
+
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.body_heading{
+    margin: 0;
+}
+
+.heading{
+    color: #black;
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	font-weight: normal;
+}
+
+
+
+.d1{
+        float:left;
+        margin-left:20%;
+}
+.d2{
+        float:right;
+        margin-right:20%;
+
+}
+/* details-box */
+        #age {
+            border-radius: 16px;
+            height: 30px;
+            width: 160px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #gender {
+            border-radius: 16px;
+            height: 30px;
+            width: 230px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #bil {
+            border-radius: 16px;
+            height: 30px;
+            width: 190px;
+            font-size: 25px;
+            text-align: center;
+        }
+        #dir {
+            border-radius: 16px;
+            height: 30px;
+            width: 190px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #alk {
+            border-radius: 16px;
+            height: 30px;
+            width: 260px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #ala {
+            border-radius: 16px;
+            height: 30px;
+            width: 280px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #asp {
+            border-radius: 14px;
+            height: 25px;
+            width: 280px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #tot {
+            border-radius: 16px;
+            height: 30px;
+            width: 180px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #alb {
+            border-radius: 16px;
+            height: 30px;
+            width: 160px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #glo {
+            border-radius: 16px;
+            height: 30px;
+            width: 290px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+#sub {
+            width: 125px;
+            height: 50px;
+            text-align: center;
+            border-radius: 16px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 20px;
+            left:45%;
+
+        }
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</style>
+
+
+</body>
+
+</html>
